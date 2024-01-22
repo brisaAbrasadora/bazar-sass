@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/scss/style.scss" />
+  </head>
+  <body>
+    <header id="header">
+        <div class="video-container">
+            <video class="video-object" loop autoplay muted>
+                <source src="/videos/landscape3.webm" type="video/webm">
+            </video>
+            <div class="video-filter"></div>
+        </div>
+        <div class="container">
+            <div class="row my-1">
+              <div class="col-3 right middle">
+                <a href="/index.html"><h2 class="title">El Bazar Salvaje</h2><!-- <img class="" src="/images/logo.png" alt="logo" /> --></a>
+              </div>
+              <div class="col-6 center middle">
+                <nav>
+                  <ul>
+                    <li>
+                      <a class="nav-category" href="#">Articulos <svg class="icon icon-circle-down"><use xlink:href="#icon-circle-down"></use></svg></a>
+                      <ul class="submenu">
+                        <li>
+                            <a class="nav-item" href="#">Armas</a><svg class="icon icon-circle-right"><use xlink:href="#icon-circle-right"></use></svg>
+                            
+                            <ul class="subsubmenu">
+                              <li><a class="nav-item" href="/articulos/vestimenta/cuerpo.html">Escudos</a></li>
+                              <li><a class="nav-item" href="/articulos/vestimenta/cuerpo.html">De una mano</a></li>
+                              <li><a class="nav-item" href="/articulos/vestimenta/cuerpo.html">Lanzas</a></li>
+                            </ul>
+                          </li>
+                        <li><a class="nav-item" href="/articulos/vestimenta/cuerpo.html">Pociones</a></li>
+                        <li>
+                          <a class="nav-item" href="#">Vestimenta</a><svg class="icon icon-circle-right"><use xlink:href="#icon-circle-right"></use></svg>
+                          <ul class="subsubmenu">
+                            <li><a class="nav-item" href="/articulos/vestimenta/cuerpo.html">Cabeza</a></li>
+                            <li><a class="nav-item" href="/articulos/vestimenta/cuerpo.html">Cuerpo</a></li>
+                            <li><a class="nav-item" href="/articulos/vestimenta/cuerpo.html">Piernas</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a class="nav-category" href="#">Materiales <svg class="icon icon-circle-down"><use xlink:href="#icon-circle-down"></use></svg></a>
+                      <ul class="submenu">
+                        <li><a class="nav-item" href="/articulos/vestimenta/cuerpo.html">Partes de monstruo</a></li>
+                        <li>
+                          <a class="nav-item" href="#">Seres vivos</a><svg class="icon icon-circle-right"><use xlink:href="#icon-circle-right"></use></svg>
+                          <ul class="subsubmenu">
+                            <li><a class="nav-item" href="/articulos/vestimenta/cuerpo.html">Insectos</a></li>
+                            <li><a class="nav-item" href="/articulos/vestimenta/cuerpo.html">Anfibios</a></li>
+                            <li><a class="nav-item" href="/articulos/vestimenta/cuerpo.html">Hadas</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a class="nav-category" href="#">Ofertas</a></li>
+                    <li><a class="nav-category" href="#">Hacer un pedido</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="col-3 middle">
+                  <div class="nav-aside-right">
+                      <!-- <svg class="icon icon-search"><use xlink:href="#icon-search"></use></svg> -->
+                      <search>
+                        <form>
+                            <input type="text" name="buscador" placeholder="Buscar...">
+                        </form>
+                      </search>
+                      <!-- <svg class="icon icon-paragraph-justify d-none"><use xlink:href="#icon-paragraph-justify"></use></svg>
+                      <a href="#"><svg class="icon icon-cart"><use xlink:href="#icon-cart"></use></svg></a> -->
+                  </div>
+              </div>
+            </div>
+            <div class="row row-cols-1">
+                <div class="col my-5 center">
+                    <h1 class="title my-5">El Bazar Salvaje</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="container my-5">
+        <!-- <div class="container my-5"> -->
+            <section class="row row-cols-1 px-5">
+                <div class="col center">
+                    <h2 class="text-center">La mayor tienda online de recursos de la naturaleza de Hyrule.<br>
+                    Envios rápidos y 100% seguros.</h2>
+                </div>
+            </section>
+            <hr style="width: 50%;" class="my-2">
+            <section class="row row-cols-1">
+                <div class="col center">
+                    <h3>Productos más populares</h3>
+                </div>
+            </section>
+            <section class="row row-cols-4 px-5 py-2">
+                <div class="col">
+                    <div class="item mx-1">
+                        <p class="label">
+                            Best Seller
+                        </p>
+                        <div class="item-top py-3 center">
+                           <img class="item-image" src="/public/images/monster/Cuerno_Bokoblin.png" alt="">
+                        </div>
+                        <div class="item-bottom px-1">
+                            <a href="/articulos/vestimenta/cuerpo/casaca-forrada.html"><h4 class="item-name py-1">Cuerno de Bokoblin</h4></a>
+                            <p class="item-price"><ins datetime="2024-01-21">5,95 $</ins> <del><small>PVPR: 12,95 $</small></del></p>
+                            <p class="item-text">Pese a no poder usarse en platos normales, al cocinarlo con insectos, lagartos o ranas contibuye a elaborar elixires.</p>
+                            <div class="item-rate py-1 middle">
+                                <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                <svg class="icon icon-star-half"><use xlink:href="#icon-star-half"></use></svg>
+                                <svg class="icon icon-star-empty"><use xlink:href="#icon-star-empty"></use></svg>
+                                <svg class="icon icon-star-empty"><use xlink:href="#icon-star-empty"></use></svg>
+                                <p class="px-1"><small>2 reviews</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="item mx-1">
+                        <div class="item-top py-3 center">
+                            <img class="item-image" src="/public/images/one-hand-weapons/Espada_Caballero.png" alt="">
+                        </div>
+                        <div class="item-bottom px-1">
+                            <a href="/articulos/vestimenta/cuerpo/casaca-forrada.html"><h4 class="item-name py-1">Espada de Caballero</h4></a>
+                            <p class="item-price">87,95 $</p>
+                            <p class="item-text">Espada que portaban los caballeros de Hyrule. En la actualidad es un arma común entre viajeros avezados, debido a su gran potencia de ataque y facilidad de uso. </p>
+                            <div class="item-rate py-1 middle">
+                                <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                <svg class="icon icon-star-half"><use xlink:href="#icon-star-half"></use></svg>
+                                <svg class="icon icon-star-empty"><use xlink:href="#icon-star-empty"></use></svg>
+                                <p class="px-1"><small>16 reviews</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col ">
+                    <div class="item mx-1">
+                        <div class="item-top py-3 center">
+                            <img class="item-image" src="/public/images/living-beings/Hada.png" alt="">
+                        </div>
+                        <div class="item-bottom px-1">
+                            <a href="/articulos/vestimenta/cuerpo/casaca-forrada.html"><h4 class="item-name py-1">Hada</h4></a>
+                            <p class="item-price">50,95 $</p>
+                            <p class="item-text">Cuando te quedes sin energía, esta hada saldrá automáticamente de tu alforja para curarte las heridas. A diferencia de las luciérnagas, su brillo se ve a la luz del día. </p>
+                            <div class="item-rate py-1 middle">
+                                <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                <p class="px-1"><small>1 reviews</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="item mx-1">
+                        <p class="label">
+                            Agotado
+                        </p>
+                        <div class="item-top py-3 center">
+                            <img class="item-image" src="/public/images/upper-equip/Pechera_Gerudo.png" alt="">
+                        </div>
+                        <div class="px-1">
+                            <a href="/articulos/vestimenta/cuerpo/casaca-forrada.html"><h4 class="item-name py-1">Pechera Gerudo</h4></a>
+                            <p class="item-price"><ins datetime="2024-01-21">76,95 $</ins> <del><small>PVPR: 150,95 $</small></del></p>
+                            <p class="item-text">Prenda tradicional de las mujeres gerudo.</p>
+                            <div class="item-rate py-1 middle">
+                                <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                <p class="px-1"><small>30 reviews</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="row row-cols-1">
+                <div class="col center">
+                    <a href="/articulos/vestimenta/cuerpo.html"><button class="button" style="vertical-align:middle"><span>Descubre más </span></button></a>
+                </div>
+            </div>
+            <section class="row row-cols-1 py-2">
+                <div class="col hero-image p-5">
+                    <div class="hero-text">
+                        <h3>Materia prima de calidad</h3>
+                        <p>Respetando siempre el medioambiente</p>
+                    </div>
+                </div>
+            </section>
+            <section class="row row-cols-2 py-2">
+                <div class="col mx-2 center middle">
+                    <h3 class="text-center">Conoce <br>nuestras tierras</h3>
+                </div>
+                <div class="col mx-2">
+                    <video  width="100%" controls muted preload="metadata">
+                        <source src="/public/videos/tierras.webm" type="video/webm">
+                        <track src="/public/videos/subtitles.vtt" kind="subtitles" srclang="es" label="Spanish">
+                    </video>
+                </div>
+            </section>
+        <!-- </div> -->
+    </main>
+    <footer>
+        <div class="container-fluid my-0">
+            <section class="row row-cols-1">
+                <div class="col">
+                    <a href="#header"><button class="p-1" type="button">Volver arriba</button></a>
+                </div>
+                
+            </section>
+        </div>
+        <div class="container">
+            <section class="row row-cols-3 my-2">
+                <div class="col px-2 right">
+                    <ul>
+                        <li>Articulos</li>
+                        <li><a href="#">Armas</a></li>
+                        <li><ul>
+                            <li><a href="/articulos/vestimenta/cuerpo.html">Escudos</a></li>
+                            <li><a href="/articulos/vestimenta/cuerpo.html">Espadas</a></li>
+                            <li><a href="/articulos/vestimenta/cuerpo.html">Lanzas</a></li>
+                        </ul></li>
+                        <li><a href="/articulos/vestimenta/cuerpo.html">Pociones</a></li>
+                        <li><a href="#">Vestimenta</a></li>
+                        <li><ul>
+                            <li><a href="/articulos/vestimenta/cuerpo.html">Cabeza</a></li>
+                            <li><a href="/articulos/vestimenta/cuerpo.html">Cuerpo</a></li>
+                            <li><a href="/articulos/vestimenta/cuerpo.html">Piernas</a></li>
+                        </ul></li>
+                    </ul>
+                </div>
+                <div class="col px-2 center">
+                    <ul>
+                        <li>Materiales</li>
+                        <li><a href="/articulos/vestimenta/cuerpo.html">Partes de monstruo</a></li>
+                        <li><a href="#">Seres vivos</a></li>
+                        <li><ul>
+                            <li><a href="/articulos/vestimenta/cuerpo.html">Insectos</a></li>
+                            <li><a href="/articulos/vestimenta/cuerpo.html">Anfibios</a></li>
+                            <li><a href="/articulos/vestimenta/cuerpo.html">Hadas</a></li>
+                        </ul></li>
+                    </ul>
+                </div>
+                <div class="col px-2">
+                    <ul>
+                        <li>El Bazar Salvaje</li>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Envios</a></li>
+                        <li><a href="#">Hacer un pedido</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Aviso legal</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <div class="container-fluid">
+            <section class="row row-cols-1">
+                <div class="col center">
+                    <p>Hecho con mucho ❤️ - Brisa 2024</p>
+                </div>
+            </section>
+        </div>
+    </footer>
+    <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+        <symbol id="icon-circle-right" viewBox="0 0 16 16">
+        <path d="M8 0c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zM8 14.5c-3.59 0-6.5-2.91-6.5-6.5s2.91-6.5 6.5-6.5 6.5 2.91 6.5 6.5-2.91 6.5-6.5 6.5z"></path>
+        <path d="M5.543 11.043l1.414 1.414 4.457-4.457-4.457-4.457-1.414 1.414 3.043 3.043z"></path>
+        </symbol>
+        <symbol id="icon-circle-down" viewBox="0 0 16 16">
+        <path d="M16 8c0-4.418-3.582-8-8-8s-8 3.582-8 8 3.582 8 8 8 8-3.582 8-8zM1.5 8c0-3.59 2.91-6.5 6.5-6.5s6.5 2.91 6.5 6.5-2.91 6.5-6.5 6.5-6.5-2.91-6.5-6.5z"></path>
+        <path d="M4.957 5.543l-1.414 1.414 4.457 4.457 4.457-4.457-1.414-1.414-3.043 3.043z"></path>
+        </symbol>
+        <symbol id="icon-paragraph-justify" viewBox="0 0 16 16">
+        <path d="M0 1h16v2h-16zM0 4h16v2h-16zM0 7h16v2h-16zM0 10h16v2h-16zM0 13h16v2h-16z"></path>
+        </symbol>
+        <symbol id="icon-star-empty" viewBox="0 0 16 16">
+        <path d="M16 6.204l-5.528-0.803-2.472-5.009-2.472 5.009-5.528 0.803 4 3.899-0.944 5.505 4.944-2.599 4.944 2.599-0.944-5.505 4-3.899zM8 11.773l-3.492 1.836 0.667-3.888-2.825-2.753 3.904-0.567 1.746-3.537 1.746 3.537 3.904 0.567-2.825 2.753 0.667 3.888-3.492-1.836z"></path>
+        </symbol>
+        <symbol id="icon-star-half" viewBox="0 0 16 16">
+        <path d="M16 6.204l-5.528-0.803-2.472-5.009-2.472 5.009-5.528 0.803 4 3.899-0.944 5.505 4.944-2.599 4.944 2.599-0.944-5.505 4-3.899zM8 11.773l-0.015 0.008 0.015-8.918 1.746 3.537 3.904 0.567-2.825 2.753 0.667 3.888-3.492-1.836z"></path>
+        </symbol>
+        <symbol id="icon-star-full" viewBox="0 0 16 16">
+        <path d="M16 6.204l-5.528-0.803-2.472-5.009-2.472 5.009-5.528 0.803 4 3.899-0.944 5.505 4.944-2.599 4.944 2.599-0.944-5.505 4-3.899z"></path>
+        </symbol>
+        </defs>
+        </svg>
+  </body>
+</html>

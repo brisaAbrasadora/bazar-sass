@@ -1,0 +1,42 @@
+@mixin create-row($cols: 12) {
+    grid-template-columns: repeat($cols, 1fr); 
+    gap: 2rem;  
+}
+
+@mixin create-col($span: 1) {
+    grid-column-end: span $span;
+}
+
+@mixin generate-marginY($size) {
+    margin-top: $size * 1rem !important;
+    margin-bottom: $size * 1rem !important;
+}
+
+@mixin generate-marginX($size) {
+    margin-left: $size * 1rem !important;
+    margin-right: $size * 1rem !important;
+}
+
+@mixin text-alignment($alignment) {
+    text-align: $alignment !important;
+}
+
+@each $alignment in $text-alignment-values {
+    .text-#{$alignment} {
+        @include text-alignment($alignment);
+    }
+}
+
+@mixin generate-paddingY($size) {
+    padding-top: $size * 1rem !important;
+    padding-bottom: $size * 1rem !important;
+}
+
+@mixin generate-paddingX($size) {
+    padding-left: $size * 1rem !important;
+    padding-right: $size * 1rem !important;
+}
+
+@mixin generate-gap($size) {
+    gap: $size * 1rem !important;
+}

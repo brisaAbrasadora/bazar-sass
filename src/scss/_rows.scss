@@ -1,0 +1,19 @@
+.row {
+    display: grid;
+
+    &:not([class*="row-cols-"]) {
+        @include create-row();
+    }
+}
+
+@for $i from 1 through 12 {
+    .row-cols-#{$i} {
+        
+        @include create-row($i);
+    }
+}
+
+.row > * {
+    // border: 1px dashed white;
+}
+

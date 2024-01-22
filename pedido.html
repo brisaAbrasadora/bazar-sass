@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/scss/style.scss" />
+  </head>
+  <body>
+    <header id="header">
+        <div class="video-container">
+            <video class="video-object" loop autoplay muted>
+                <source src="/videos/landscape3.webm" type="video/webm">
+            </video>
+            <div class="video-filter"></div>
+        </div>
+        <div class="container">
+            <div class="row my-1">
+              <div class="col-3 right middle">
+                <a href="/index.html"><h2 class="title">El Bazar Salvaje</h2><!-- <img class="" src="/images/logo.png" alt="logo" /> --></a>
+              </div>
+              <div class="col-6 center middle">
+                <nav>
+                  <ul>
+                    <li>
+                      <a class="nav-category" href="#">Articulos <svg class="icon icon-circle-down"><use xlink:href="#icon-circle-down"></use></svg></a>
+                      <ul class="submenu">
+                        <li>
+                            <a class="nav-item" href="#">Armas</a><svg class="icon icon-circle-right"><use xlink:href="#icon-circle-right"></use></svg>
+                            
+                            <ul class="subsubmenu">
+                              <li><a class="nav-item" href="/articulos/vestimenta/cuerpo.html">Escudos</a></li>
+                              <li><a class="nav-item" href="/articulos/vestimenta/cuerpo.html">De una mano</a></li>
+                              <li><a class="nav-item" href="/articulos/vestimenta/cuerpo.html">Lanzas</a></li>
+                            </ul>
+                          </li>
+                        <li><a class="nav-item" href="/articulos/vestimenta/cuerpo.html">Pociones</a></li>
+                        <li>
+                          <a class="nav-item" href="#">Vestimenta</a><svg class="icon icon-circle-right"><use xlink:href="#icon-circle-right"></use></svg>
+                          <ul class="subsubmenu">
+                            <li><a class="nav-item" href="/articulos/vestimenta/cuerpo.html">Cabeza</a></li>
+                            <li><a class="nav-item" href="/articulos/vestimenta/cuerpo.html">Cuerpo</a></li>
+                            <li><a class="nav-item" href="/articulos/vestimenta/cuerpo.html">Piernas</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a class="nav-category" href="#">Materiales <svg class="icon icon-circle-down"><use xlink:href="#icon-circle-down"></use></svg></a>
+                      <ul class="submenu">
+                        <li><a class="nav-item" href="/articulos/vestimenta/cuerpo.html">Partes de monstruo</a></li>
+                        <li>
+                          <a class="nav-item" href="#">Seres vivos</a><svg class="icon icon-circle-right"><use xlink:href="#icon-circle-right"></use></svg>
+                          <ul class="subsubmenu">
+                            <li><a class="nav-item" href="/articulos/vestimenta/cuerpo.html">Insectos</a></li>
+                            <li><a class="nav-item" href="/articulos/vestimenta/cuerpo.html">Anfibios</a></li>
+                            <li><a class="nav-item" href="/articulos/vestimenta/cuerpo.html">Hadas</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a class="nav-category" href="/pedido.html">Hacer un pedido</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="col-3 middle">
+                  <div class="nav-aside-right">
+                      <!-- <svg class="icon icon-search"><use xlink:href="#icon-search"></use></svg> -->
+                      <search>
+                        <form>
+                            <input type="text" name="buscador" placeholder="Buscar...">
+                        </form>
+                      </search>
+                      <!-- <svg class="icon icon-paragraph-justify d-none"><use xlink:href="#icon-paragraph-justify"></use></svg>
+                      <a href="#"><svg class="icon icon-cart"><use xlink:href="#icon-cart"></use></svg></a> -->
+                  </div>
+              </div>
+            </div>
+        </div>
+    </header>
+    <div class="container my-2">
+        <div class="row">
+            <main class="col-9">
+                <div class="row row-cols-1  px-5 py-2">
+                    <div class="col-1 ">
+                        <h3 class="">Tu cesta de la compra</h3>
+                    </div>
+                </div>
+                <div class="shopping-cart py-2">
+                    <div class="row px-5">
+                        <div class="col-2  center">
+                            <img src="/public/images/upper-equip/Casaca_Forrada.png" alt="">
+                        </div>
+                        <div class="col-8  p-1">
+                            <h4>Nombre del item</h4>
+                            <p class="item-price"><ins datetime="2024-01-21">105,95 $</ins> <del><small>PVPR: 120,95 $</small></del></p>
+                            <form action="">
+                                <label for="quantity">Unidades: </label><input type="number" name="quantity" id="quantity" min="1" class="mx-1">
+                            </form>
+                        </div>
+                        <div class="col-2  text-right down">
+                            <p class="fw-700 ">105,95 $</p>
+                        </div>
+                    </div>
+                    <div class="row px-5">
+                        <div class="col-2  center">
+                            <img src="/public/images/upper-equip/Casaca_Forrada.png" alt="">
+                        </div>
+                        <div class="col-8  p-1">
+                            <h4>Nombre del item</h4>
+                            <p class="item-price"><ins datetime="2024-01-21">105,95 $</ins> <del><small>PVPR: 120,95 $</small></del></p>
+                            <form action="">
+                                <label for="quantity">Unidades: </label><input type="number" name="quantity" id="quantity" min="1" class="mx-1">
+                            </form>
+                        </div>
+                        <div class="col-2  text-right down">
+                            <p class="fw-700 ">105,95 $</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <aside class="col-3 p-2">
+                <section class="row row-cols-1">
+                    <div class="col">
+                        <div class="sidebar">
+                            <h3>Ticket</h3>
+                            <div class="row row-cols-2 my-1" style="gap: 0;">
+                                <div class="col"><p>Articulos</p></div>
+                                <div class="col right"><p class="text-center">200,00 $</p></div>
+                                <div class="col"><p>IVA</p></div>
+                                <div class="col right"><p class="text-center">200,00 $</p></div>
+                                <div class="col"><p>Total</p></div>
+                                <div class="col right fw-700"><p class="text-center">200,00 $</p></div>
+                            </div>
+                            <hr style="width: 80%;">
+                            <h3 class="my-1">Metodo de pago</h3>
+                            <a href="#"><button type="button">amigo</button></a>
+                            
+                            
+                        </div>
+                    </div>
+                </section>
+            </aside>
+        </div>
+    </div>
+    <footer>
+        <div class="container-fluid my-0">
+            <section class="row row-cols-1">
+                <div class="col">
+                    <a href="#header"><button class="p-1" type="button">Volver arriba</button></a>
+                </div>
+                
+            </section>
+        </div>
+        <div class="container">
+            <section class="row row-cols-3 my-2">
+                <div class="col px-2 right">
+                    <ul>
+                        <li>Articulos</li>
+                        <li><a href="#">Armas</a></li>
+                        <li><ul>
+                            <li><a href="/articulos/vestimenta/cuerpo.html">Escudos</a></li>
+                            <li><a href="/articulos/vestimenta/cuerpo.html">Espadas</a></li>
+                            <li><a href="/articulos/vestimenta/cuerpo.html">Lanzas</a></li>
+                        </ul></li>
+                        <li><a href="/articulos/vestimenta/cuerpo.html">Pociones</a></li>
+                        <li><a href="#">Vestimenta</a></li>
+                        <li><ul>
+                            <li><a href="/articulos/vestimenta/cuerpo.html">Cabeza</a></li>
+                            <li><a href="/articulos/vestimenta/cuerpo.html">Cuerpo</a></li>
+                            <li><a href="/articulos/vestimenta/cuerpo.html">Piernas</a></li>
+                        </ul></li>
+                    </ul>
+                </div>
+                <div class="col px-2 center">
+                    <ul>
+                        <li>Materiales</li>
+                        <li><a href="/articulos/vestimenta/cuerpo.html">Partes de monstruo</a></li>
+                        <li><a href="#">Seres vivos</a></li>
+                        <li><ul>
+                            <li><a href="/articulos/vestimenta/cuerpo.html">Insectos</a></li>
+                            <li><a href="/articulos/vestimenta/cuerpo.html">Anfibios</a></li>
+                            <li><a href="/articulos/vestimenta/cuerpo.html">Hadas</a></li>
+                        </ul></li>
+                    </ul>
+                </div>
+                <div class="col px-2">
+                    <ul>
+                        <li>El Bazar Salvaje</li>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Envios</a></li>
+                        <li><a href="/pedido.html">Hacer un pedido</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Aviso legal</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <div class="container-fluid">
+            <section class="row row-cols-1">
+                <div class="col center">
+                    <p>Hecho con mucho ❤️ - Brisa 2024</p>
+                </div>
+            </section>
+        </div>
+    </footer>
+    <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+        <symbol id="icon-circle-right" viewBox="0 0 16 16">
+        <path d="M8 0c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zM8 14.5c-3.59 0-6.5-2.91-6.5-6.5s2.91-6.5 6.5-6.5 6.5 2.91 6.5 6.5-2.91 6.5-6.5 6.5z"></path>
+        <path d="M5.543 11.043l1.414 1.414 4.457-4.457-4.457-4.457-1.414 1.414 3.043 3.043z"></path>
+        </symbol>
+        <symbol id="icon-circle-down" viewBox="0 0 16 16">
+        <path d="M16 8c0-4.418-3.582-8-8-8s-8 3.582-8 8 3.582 8 8 8 8-3.582 8-8zM1.5 8c0-3.59 2.91-6.5 6.5-6.5s6.5 2.91 6.5 6.5-2.91 6.5-6.5 6.5-6.5-2.91-6.5-6.5z"></path>
+        <path d="M4.957 5.543l-1.414 1.414 4.457 4.457 4.457-4.457-1.414-1.414-3.043 3.043z"></path>
+        </symbol>
+        <symbol id="icon-paragraph-justify" viewBox="0 0 16 16">
+        <path d="M0 1h16v2h-16zM0 4h16v2h-16zM0 7h16v2h-16zM0 10h16v2h-16zM0 13h16v2h-16z"></path>
+        </symbol>
+        <symbol id="icon-star-empty" viewBox="0 0 16 16">
+        <path d="M16 6.204l-5.528-0.803-2.472-5.009-2.472 5.009-5.528 0.803 4 3.899-0.944 5.505 4.944-2.599 4.944 2.599-0.944-5.505 4-3.899zM8 11.773l-3.492 1.836 0.667-3.888-2.825-2.753 3.904-0.567 1.746-3.537 1.746 3.537 3.904 0.567-2.825 2.753 0.667 3.888-3.492-1.836z"></path>
+        </symbol>
+        <symbol id="icon-star-half" viewBox="0 0 16 16">
+        <path d="M16 6.204l-5.528-0.803-2.472-5.009-2.472 5.009-5.528 0.803 4 3.899-0.944 5.505 4.944-2.599 4.944 2.599-0.944-5.505 4-3.899zM8 11.773l-0.015 0.008 0.015-8.918 1.746 3.537 3.904 0.567-2.825 2.753 0.667 3.888-3.492-1.836z"></path>
+        </symbol>
+        <symbol id="icon-star-full" viewBox="0 0 16 16">
+        <path d="M16 6.204l-5.528-0.803-2.472-5.009-2.472 5.009-5.528 0.803 4 3.899-0.944 5.505 4.944-2.599 4.944 2.599-0.944-5.505 4-3.899z"></path>
+        </symbol>
+        </defs>
+        </svg>
+  </body>
+</html>

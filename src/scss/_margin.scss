@@ -1,0 +1,14 @@
+@for $i from 0 through 10 {
+    .my-#{$i} {
+        @include generate-marginY($i);
+    }
+
+    .m-#{$i} {
+        @include generate-marginY($i);
+        @include generate-marginX($i);
+    }
+
+    .mx-#{$i} {
+        @include generate-marginX($i);
+    }
+}

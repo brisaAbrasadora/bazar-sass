@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/scss/style.scss" />
+  </head>
+  <body>
+    <header id="header">
+        <div class="video-container">
+            <video class="video-object" loop autoplay muted>
+                <source src="/videos/landscape3.webm" type="video/webm">
+            </video>
+            <div class="video-filter"></div>
+        </div>
+        <div class="container">
+            <div class="row my-1">
+              <div class="col-3 right middle">
+                <a href="/index.html"><h2 class="title">El Bazar Salvaje</h2><!-- <img class="" src="/images/logo.png" alt="logo" /> --></a>
+              </div>
+              <div class="col-6 center middle">
+                <nav>
+                  <ul>
+                    <li>
+                      <a class="nav-category" href="#">Articulos <svg class="icon icon-circle-down"><use xlink:href="#icon-circle-down"></use></svg></a>
+                      <ul class="submenu">
+                        <li>
+                            <a class="nav-item" href="#">Armas</a><svg class="icon icon-circle-right"><use xlink:href="#icon-circle-right"></use></svg>
+                            
+                            <ul class="subsubmenu">
+                              <li><a class="nav-item" href="/articulos/vestimenta/cuerpo.html">Escudos</a></li>
+                              <li><a class="nav-item" href="/articulos/vestimenta/cuerpo.html">De una mano</a></li>
+                              <li><a class="nav-item" href="/articulos/vestimenta/cuerpo.html">Lanzas</a></li>
+                            </ul>
+                          </li>
+                        <li><a class="nav-item" href="/articulos/vestimenta/cuerpo.html">Pociones</a></li>
+                        <li>
+                          <a class="nav-item" href="#">Vestimenta</a><svg class="icon icon-circle-right"><use xlink:href="#icon-circle-right"></use></svg>
+                          <ul class="subsubmenu">
+                            <li><a class="nav-item" href="/articulos/vestimenta/cuerpo.html">Cabeza</a></li>
+                            <li><a class="nav-item" href="/articulos/vestimenta/cuerpo.html">Cuerpo</a></li>
+                            <li><a class="nav-item" href="/articulos/vestimenta/cuerpo.html">Piernas</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a class="nav-category" href="#">Materiales <svg class="icon icon-circle-down"><use xlink:href="#icon-circle-down"></use></svg></a>
+                      <ul class="submenu">
+                        <li><a class="nav-item" href="/articulos/vestimenta/cuerpo.html">Partes de monstruo</a></li>
+                        <li>
+                          <a class="nav-item" href="#">Seres vivos</a><svg class="icon icon-circle-right"><use xlink:href="#icon-circle-right"></use></svg>
+                          <ul class="subsubmenu">
+                            <li><a class="nav-item" href="/articulos/vestimenta/cuerpo.html">Insectos</a></li>
+                            <li><a class="nav-item" href="/articulos/vestimenta/cuerpo.html">Anfibios</a></li>
+                            <li><a class="nav-item" href="/articulos/vestimenta/cuerpo.html">Hadas</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a class="nav-category" href="/pedido.html">Hacer un pedido</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="col-3 middle">
+                  <div class="nav-aside-right">
+                      <!-- <svg class="icon icon-search"><use xlink:href="#icon-search"></use></svg> -->
+                      <search>
+                        <form>
+                            <input type="text" name="buscador" placeholder="Buscar...">
+                        </form>
+                      </search>
+                      <!-- <svg class="icon icon-paragraph-justify d-none"><use xlink:href="#icon-paragraph-justify"></use></svg>
+                      <a href="#"><svg class="icon icon-cart"><use xlink:href="#icon-cart"></use></svg></a> -->
+                  </div>
+              </div>
+            </div>
+        </div>
+    </header>
+    <div class="container my-2">
+        <div class="row">
+            <aside class="col-3 p-2">
+                <section class="row row-cols-1">
+                    <div class="col">
+                        <div class="sidebar">
+                            <h3>Navegacion</h3>
+                            <div>
+                                <details open>
+                                    <summary>Articulos</summary>
+                                    <details>
+                                      <summary>Armas</summary>
+                                      <p><a href="/articulos/vestimenta/cuerpo.html">Escudos</a></p>
+                                      <p><a href="/articulos/vestimenta/cuerpo.html">De una mano</a></p>
+                                      <p><a href="/articulos/vestimenta/cuerpo.html">Lanzas</a></p>
+                                    </details>
+                                    <p><a href="/articulos/vestimenta/cuerpo.html">Pociones</a></p>
+                                    <details open>
+                                        <summary>Vestimenta</summary>
+                                        <p><a href="/articulos/vestimenta/cuerpo.html">Cabeza</a></p>
+                                        <p><a class="active" href="/articulos/vestimenta/cuerpo.html">Cuerpo</a></p>
+                                        <p><a href="/articulos/vestimenta/cuerpo.html">Piernas</a></p>
+                                      </details>
+                                  </details>
+                                  <details>
+                                    <summary>Materiales</summary>
+                                    <p><a href="/articulos/vestimenta/cuerpo.html">Partes de monstruo</a></p>
+                                    <details>
+                                        <summary>Seres vivos</summary>
+                                        <p><a href="/articulos/vestimenta/cuerpo.html">Insectos</a></p>
+                                        <p><a href="/articulos/vestimenta/cuerpo.html">Anfibios</a></p>
+                                        <p><a href="/articulos/vestimenta/cuerpo.html">Hadas</a></p>
+                                      </details>
+                                  </details>
+                            </div>
+                            <hr style="width: 80%;">
+                            <h3 class="my-1">Filtros</h3>
+                            <form action="">
+                                <h4 class="my-1">Localizacion</h4>
+                                <input type="checkbox" id="pradera" name="localizacion" value="Pradera">
+                                <label for="pradera">Pradera</label><br>
+                                <input type="checkbox" id="montana" name="localizacion" value="Montana">
+                                <label for="montana">Montaña</label><br>
+                                <input type="checkbox" id="oceano" name="localizacion" value="Oceano">
+                                <label for="oceano">Oceano</label><br>
+                                <input type="checkbox" id="desierto" name="localizacion" value="Desierto">
+                                <label for="desierto">Desierto</label>
+                                <h4 class="my-1">Precio</h4>
+                                <label for="precio">Precio: (0$ - 200$)</label><br>
+                                <input type="range" id="precio" name="precio" min="0" max="200" style="width: 100%;">
+                                <h4 class="my-1">Rating</h4>
+                                <svg class="icon icon-star-empty"><use xlink:href="#icon-star-empty"></use></svg>
+                                <svg class="icon icon-star-empty"><use xlink:href="#icon-star-empty"></use></svg>
+                                <svg class="icon icon-star-empty"><use xlink:href="#icon-star-empty"></use></svg>
+                                <svg class="icon icon-star-empty"><use xlink:href="#icon-star-empty"></use></svg>
+                                <svg class="icon icon-star-empty"><use xlink:href="#icon-star-empty"></use></svg><br>
+                                <input type="reset" value="Reset filters">
+                            </form>
+                            
+                            
+                        </div>
+                    </div>
+                </section>
+            </aside>
+            <main class="col-9">
+                <section class="row row-cols-3 px-5 py-2">
+                    <div class="col">
+                        <div class="item mx-1">
+                            <div class="item-top py-3 center">
+                               <img class="item-image" src="/public/images/upper-equip/Armadura_Ancestral.png" alt="">
+                            </div>
+                            <div class="item-bottom px-1">
+                                <a href="/articulos/vestimenta/cuerpo/casaca-forrada.html"><h4 class="item-name py-1">Armadura Ancestral</h4></a>
+                                <p class="item-price"><ins datetime="2024-01-21">105,95 $</ins> <del><small>PVPR: 120,95 $</small></del></p>
+                                <p class="item-text">Armadura forjada mediante tecnología sheikah ancestral empleando partes de guardianes. Reduce el daño inflingido por armas ancestrales. </p>
+                                <div class="item-rate py-1 middle">
+                                    <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                    <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                    <svg class="icon icon-star-half"><use xlink:href="#icon-star-half"></use></svg>
+                                    <svg class="icon icon-star-empty"><use xlink:href="#icon-star-empty"></use></svg>
+                                    <svg class="icon icon-star-empty"><use xlink:href="#icon-star-empty"></use></svg>
+                                    <p class="px-1"><small>2 reviews</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="item mx-1">
+                            <p class="label">
+                                Agotado
+                            </p>
+                            <div class="item-top py-3 center">
+                                <img class="item-image" src="/public/images/upper-equip/Armadura_Hyliana.png" alt="">
+                            </div>
+                            <div class="item-bottom px-1">
+                                <a href="/articulos/vestimenta/cuerpo/casaca-forrada.html"><h4 class="item-name py-1">Armadura Hyliana</h4></a>
+                                <p class="item-price">87,95 $</p>
+                                <p class="item-text">Armadura compuesta de robustas piezas metálicas, y predilecta de los guardias de Hyrule por su alto nivel defensivo. Su elaborada artesanía salta a la vista. </p>
+                                <div class="item-rate py-1 middle">
+                                    <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                    <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                    <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                    <svg class="icon icon-star-half"><use xlink:href="#icon-star-half"></use></svg>
+                                    <svg class="icon icon-star-empty"><use xlink:href="#icon-star-empty"></use></svg>
+                                    <p class="px-1"><small>16 reviews</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col ">
+                        <div class="item mx-1">
+                            <div class="item-top py-3 center">
+                                <img class="item-image" src="/public/images/upper-equip/Armadura_Ignifuga.png" alt="">
+                            </div>
+                            <div class="item-bottom px-1">
+                                <a href="/articulos/vestimenta/cuerpo/casaca-forrada.html"><h4 class="item-name py-1">Armadura Ignifuga</h4></a>
+                                <p class="item-price"><ins datetime="2024-01-21">30,95 $</ins> <del><small>PVPR: 67,95 $</small></del></p>
+                                <p class="item-text">Armadura fabricada especialmente para quienes se aventuren hasta Ciudad Goron. Al estar elaborada a base de piedras, ofrece resistencia al fuego.</p>
+                                <div class="item-rate py-1 middle">
+                                    <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                    <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                    <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                    <svg class="icon icon-star-half"><use xlink:href="#icon-star-half"></use></svg>
+                                    <svg class="icon icon-star-empty"><use xlink:href="#icon-star-empty"></use></svg>
+                                    <p class="px-1"><small>1 reviews</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="item mx-1">
+                            <div class="item-top py-3 center">
+                               <img class="item-image" src="/public/images/upper-equip/Armadura_Zora.png" alt="">
+                            </div>
+                            <div class="item-bottom px-1">
+                                <a href="/articulos/vestimenta/cuerpo/casaca-forrada.html"><h4 class="item-name py-1">Armadura Zora</h4></a>
+                                <p class="item-price"><ins datetime="2024-01-21">105,95 $</ins> <del><small>PVPR: 120,95 $</small></del></p>
+                                <p class="item-text">Elaborada generación tras generación por las princesas zora para sus futuros esposos. Al vestirlas se puede ascender por cascadas.</p>
+                                <div class="item-rate py-1 middle">
+                                    <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                    <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                    <svg class="icon icon-star-half"><use xlink:href="#icon-star-half"></use></svg>
+                                    <svg class="icon icon-star-empty"><use xlink:href="#icon-star-empty"></use></svg>
+                                    <svg class="icon icon-star-empty"><use xlink:href="#icon-star-empty"></use></svg>
+                                    <p class="px-1"><small>2 reviews</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="item mx-1">
+                            <div class="item-top py-3 center">
+                                <img class="item-image" src="/public/images/upper-equip/Camiseta_Escalada.png" alt="">
+                            </div>
+                            <div class="item-bottom px-1">
+                                <a href="/articulos/vestimenta/cuerpo/casaca-forrada.html"><h4 class="item-name py-1">Camiseta Escalada</h4></a>
+                                <p class="item-price">87,95 $</p>
+                                <p class="item-text">Atuendo para trepar elaborado por medio de tecnología ancestral y cuyos guantes evitan que se resbale.  </p>
+                                <div class="item-rate py-1 middle">
+                                    <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                    <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                    <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                    <svg class="icon icon-star-half"><use xlink:href="#icon-star-half"></use></svg>
+                                    <svg class="icon icon-star-empty"><use xlink:href="#icon-star-empty"></use></svg>
+                                    <p class="px-1"><small>16 reviews</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col ">
+                        <div class="item mx-1">
+                            <div class="item-top py-3 center">
+                                <img class="item-image" src="/public/images/upper-equip/Camiseta_Luminosa.png" alt="">
+                            </div>
+                            <div class="item-bottom px-1">
+                                <a href="/articulos/vestimenta/cuerpo/casaca-forrada.html"><h4 class="item-name py-1">Camiseta Luminosa</h4></a>
+                                <p class="item-price"><ins datetime="2024-01-21">30,95 $</ins> <del><small>PVPR: 67,95 $</small></del></p>
+                                <p class="item-text">Prenda que se vende clandestinamente en el Club Secreto Gerudo. Contiene un tinte a base de gemas luminosas que revela un misterioso diseño en la oscuridad.</p>
+                                <div class="item-rate py-1 middle">
+                                    <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                    <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                    <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                    <svg class="icon icon-star-half"><use xlink:href="#icon-star-half"></use></svg>
+                                    <svg class="icon icon-star-empty"><use xlink:href="#icon-star-empty"></use></svg>
+                                    <p class="px-1"><small>1 reviews</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="item mx-1">
+                            <p class="label">
+                                Agotado
+                            </p>
+                            <div class="item-top py-3 center">
+                               <img class="item-image" src="/public/images/upper-equip/Camiseta_Vieja.png" alt="">
+                            </div>
+                            <div class="item-bottom px-1">
+                                <a href="/articulos/vestimenta/cuerpo/casaca-forrada.html"><h4 class="item-name py-1">Camiseta Vieja</h4></a>
+                                <p class="item-price"><ins datetime="2024-01-21">105,95 $</ins> <del><small>PVPR: 120,95 $</small></del></p>
+                                <p class="item-text">Una camiseta sencilla y vieja. Está un poco rota y te queda pequeña, pero aún se puede usar.</p>
+                                <div class="item-rate py-1 middle">
+                                    <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                    <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                    <svg class="icon icon-star-half"><use xlink:href="#icon-star-half"></use></svg>
+                                    <svg class="icon icon-star-empty"><use xlink:href="#icon-star-empty"></use></svg>
+                                    <svg class="icon icon-star-empty"><use xlink:href="#icon-star-empty"></use></svg>
+                                    <p class="px-1"><small>2 reviews</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="item mx-1">
+                            <div class="item-top py-3 center">
+                                <img class="item-image" src="/public/images/upper-equip/Casaca_Forrada.png" alt="">
+                            </div>
+                            <div class="item-bottom px-1">
+                                <a href="/articulos/vestimenta/cuerpo/casaca-forrada.html"><h4 class="item-name py-1">Casaca Forrada</h4></a>
+                                <p class="item-price">87,95 $</p>
+                                <p class="item-text">Prenda de abrigo apreciada entre las gentes de la montaña. Se fabrica con una tela recia y se complementa con un par de guantes. </p>
+                                <div class="item-rate py-1 middle">
+                                    <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                    <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                    <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                    <svg class="icon icon-star-half"><use xlink:href="#icon-star-half"></use></svg>
+                                    <svg class="icon icon-star-empty"><use xlink:href="#icon-star-empty"></use></svg>
+                                    <p class="px-1"><small>16 reviews</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col ">
+                        <div class="item mx-1">
+                            <div class="item-top py-3 center">
+                                <img class="item-image" src="/public/images/upper-equip/Hombrera_Desierto.png" alt="">
+                            </div>
+                            <div class="item-bottom px-1">
+                                <a href="/articulos/vestimenta/cuerpo/casaca-forrada.html"><h4 class="item-name py-1">Hombrera Desierto</h4></a>
+                                <p class="item-price"><ins datetime="2024-01-21">30,95 $</ins> <del><small>PVPR: 67,95 $</small></del></p>
+                                <p class="item-text">Armadura masculina que se vende en el Club Secreto Gerudo. Protege del calor gracias a los zafiros que tiene incrustados. </p>
+                                <div class="item-rate py-1 middle">
+                                    <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                    <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                    <svg class="icon icon-star-full"><use xlink:href="#icon-star-full"></use></svg>
+                                    <svg class="icon icon-star-half"><use xlink:href="#icon-star-half"></use></svg>
+                                    <svg class="icon icon-star-empty"><use xlink:href="#icon-star-empty"></use></svg>
+                                    <p class="px-1"><small>1 reviews</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="row row-cols-1 py-1">
+                    <div class="col center">
+                        <div class="btn-group">
+                            <button class="active" type="button">1</button>
+                            <button type="button">2</button>
+                            <button type="button">3</button>
+                            <button type="button">...</button>
+                            <button type="button">10</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <footer>
+        <div class="container-fluid my-0">
+            <section class="row row-cols-1">
+                <div class="col">
+                    <a href="#header"><button class="p-1" type="button">Volver arriba</button></a>
+                </div>
+                
+            </section>
+        </div>
+        <div class="container">
+            <section class="row row-cols-3 my-2">
+                <div class="col px-2 right">
+                    <ul>
+                        <li>Articulos</li>
+                        <li><a href="#">Armas</a></li>
+                        <li><ul>
+                            <li><a href="/articulos/vestimenta/cuerpo.html">Escudos</a></li>
+                            <li><a href="/articulos/vestimenta/cuerpo.html">Espadas</a></li>
+                            <li><a href="/articulos/vestimenta/cuerpo.html">Lanzas</a></li>
+                        </ul></li>
+                        <li><a href="/articulos/vestimenta/cuerpo.html">Pociones</a></li>
+                        <li><a href="#">Vestimenta</a></li>
+                        <li><ul>
+                            <li><a href="/articulos/vestimenta/cuerpo.html">Cabeza</a></li>
+                            <li><a href="/articulos/vestimenta/cuerpo.html">Cuerpo</a></li>
+                            <li><a href="/articulos/vestimenta/cuerpo.html">Piernas</a></li>
+                        </ul></li>
+                    </ul>
+                </div>
+                <div class="col px-2 center">
+                    <ul>
+                        <li>Materiales</li>
+                        <li><a href="/articulos/vestimenta/cuerpo.html">Partes de monstruo</a></li>
+                        <li><a href="/articulos/vestimenta/cuerpo.html">Seres vivos</a></li>
+                        <li><ul>
+                            <li><a href="/articulos/vestimenta/cuerpo.html">Insectos</a></li>
+                            <li><a href="/articulos/vestimenta/cuerpo.html">Anfibios</a></li>
+                            <li><a href="/articulos/vestimenta/cuerpo.html">Hadas</a></li>
+                        </ul></li>
+                    </ul>
+                </div>
+                <div class="col px-2">
+                    <ul>
+                        <li>El Bazar Salvaje</li>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Envios</a></li>
+                        <li><a href="/pedido.html">Hacer un pedido</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Aviso legal</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <div class="container-fluid">
+            <section class="row row-cols-1">
+                <div class="col center">
+                    <p>Hecho con mucho ❤️ - Brisa 2024</p>
+                </div>
+            </section>
+        </div>
+    </footer>
+    <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+        <symbol id="icon-circle-right" viewBox="0 0 16 16">
+        <path d="M8 0c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zM8 14.5c-3.59 0-6.5-2.91-6.5-6.5s2.91-6.5 6.5-6.5 6.5 2.91 6.5 6.5-2.91 6.5-6.5 6.5z"></path>
+        <path d="M5.543 11.043l1.414 1.414 4.457-4.457-4.457-4.457-1.414 1.414 3.043 3.043z"></path>
+        </symbol>
+        <symbol id="icon-circle-down" viewBox="0 0 16 16">
+        <path d="M16 8c0-4.418-3.582-8-8-8s-8 3.582-8 8 3.582 8 8 8 8-3.582 8-8zM1.5 8c0-3.59 2.91-6.5 6.5-6.5s6.5 2.91 6.5 6.5-2.91 6.5-6.5 6.5-6.5-2.91-6.5-6.5z"></path>
+        <path d="M4.957 5.543l-1.414 1.414 4.457 4.457 4.457-4.457-1.414-1.414-3.043 3.043z"></path>
+        </symbol>
+        <symbol id="icon-paragraph-justify" viewBox="0 0 16 16">
+        <path d="M0 1h16v2h-16zM0 4h16v2h-16zM0 7h16v2h-16zM0 10h16v2h-16zM0 13h16v2h-16z"></path>
+        </symbol>
+        <symbol id="icon-star-empty" viewBox="0 0 16 16">
+        <path d="M16 6.204l-5.528-0.803-2.472-5.009-2.472 5.009-5.528 0.803 4 3.899-0.944 5.505 4.944-2.599 4.944 2.599-0.944-5.505 4-3.899zM8 11.773l-3.492 1.836 0.667-3.888-2.825-2.753 3.904-0.567 1.746-3.537 1.746 3.537 3.904 0.567-2.825 2.753 0.667 3.888-3.492-1.836z"></path>
+        </symbol>
+        <symbol id="icon-star-half" viewBox="0 0 16 16">
+        <path d="M16 6.204l-5.528-0.803-2.472-5.009-2.472 5.009-5.528 0.803 4 3.899-0.944 5.505 4.944-2.599 4.944 2.599-0.944-5.505 4-3.899zM8 11.773l-0.015 0.008 0.015-8.918 1.746 3.537 3.904 0.567-2.825 2.753 0.667 3.888-3.492-1.836z"></path>
+        </symbol>
+        <symbol id="icon-star-full" viewBox="0 0 16 16">
+        <path d="M16 6.204l-5.528-0.803-2.472-5.009-2.472 5.009-5.528 0.803 4 3.899-0.944 5.505 4.944-2.599 4.944 2.599-0.944-5.505 4-3.899z"></path>
+        </symbol>
+        </defs>
+        </svg>
+  </body>
+</html>

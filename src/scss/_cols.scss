@@ -1,0 +1,17 @@
+.col {
+    display: flex;
+    @include create-col();
+    // @extend %testing;
+}
+
+@for $i from 2 through 12 {
+    .col-#{$i} {
+        display: flex;
+        flex-direction: column;
+        @include create-col($i);
+        // @extend %testing;
+    }
+}
+
+
+
