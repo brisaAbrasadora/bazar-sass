@@ -1,33 +1,24 @@
 @import "_variables";
+@import "_keyframes";
 @import "_mixin";
-@import "_menu";
-@import "_rows";
-@import "_cols";
 @import "_fonts";
+@import "_menu";
 @import "_miscelaneous";
-@import "_searchbar";
-@import "_header";
-@import "_main";
-@import "_margin";
-@import "_padding";
-@import "_item";
-@import "_footer";
+@import "_classes";
+@import "_tags";
 
 %testing {
     background-color: red !important;
     border: 1px dashed black !important;
 }
 
-
-body {
-    padding: 0;
-    margin: 0;
-    background-color: darken($brand-color, 5);
-    font-family: "ITCAvantGarde";
+.testing {
+    @extend %testing;
 }
 
-footer {
-    position: relative;
+%container {
+    background-color: white;
+    border-radius: 20px;
 }
 
 .container {
@@ -37,7 +28,6 @@ footer {
     margin-left: auto;
     margin-right: auto;
     display: grid;
-    // z-index: 1;
 
     &-fluid {
         position: relative;
@@ -51,222 +41,16 @@ footer {
     stroke-width: 0;
     stroke: currentColor;
     fill: currentColor;
-    color: white;
-
 }
 
-.icon-circle-down {
-    margin-left: 0.3em;
-}
-
+.icon-circle-down,
 .icon-circle-right {
-    color: black;
-    margin-left: 0.8em;
+    margin-left: 0.5em;
 }
 
 .icon-star-full,
 .icon-star-half,
-.icon-star-empty {
+.icon-star-empty,
+.icon-circle-right {
     color: black;
-}
-
-.btn-group {
-
-    button {
-        background-color: darken($link-color, 5%);
-        /* Green */
-        border: none;
-        color: white;
-        padding: 15px 20px;
-        text-align: center;
-        text-decoration: none;
-        font-size: 0.9rem;
-        cursor: pointer;
-        float: left;
-        font-family: "FOT-Rodin";
-
-        &:active {
-            background-color: darken($link-color, 20) !important;
-        }
-
-        &.active {
-            background-color: $link-color;
-        }
-
-        &:first-child {
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
-        }
-
-        &:last-child {
-            border-top-right-radius: 10px;
-            border-bottom-right-radius: 10px;
-        }
-
-        &:hover {
-            background-color: $link-color;
-        }
-
-
-    }
-}
-
-details {
-    margin-top: 1em;
-    margin-bottom: 1em;
-
-    .active {
-        margin-left: 1rem;
-        color: $brand-color !important;
-        font-weight: 500;
-        text-shadow: 2px 2px 2px lighten($brand-color, 20%);
-        text-decoration: underline !important;
-    }
-
-    >details {
-        padding-left: 1.5rem;
-        /* Padding para el segundo nivel */
-
-        >details {
-            padding-left: 1.5rem;
-            /* Puedes continuar así para más niveles de anidación */
-        }
-    }
-
-    p {
-        padding-left: 1.5rem;
-        /* Padding para el contenido de los detalles */
-    }
-}
-
-h3,
-h4 {
-    padding: 0;
-    margin: 0;
-}
-
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-
-    a {
-        color: $link-color;
-        text-decoration: none;
-
-        &:visited {
-            color: $link-color;
-        }
-
-        &:hover {
-            color: $brand-color;
-            text-decoration: underline;
-        }
-    }
-
-    .icon {
-        height: 1.5rem;
-        width: 1.5rem;
-    }
-}
-
-input[type="reset"] {
-    font-family: "FOT-rodin";
-    color: white;
-    margin-top: 1.5em;
-    padding: 8px;
-    font-size: 0.9em;
-    background-color: $link-color;
-    border: none;
-    border-radius: 2px;
-    box-shadow: 1px 1px 1px black;
-
-    &:active {
-        background-color: darken($link-color, 20);
-        transform: translate(1px, 1px);
-    }
-}
-
-@for $i from 1 through 5 {
-    .text-size-#{$i} {
-        font-size: $i * 0.1rem + 1;
-    }
-}
-
-@each $weight in $font-weight-values {
-    .fw-#{$weight} {
-        font-weight: $weight;
-    }
-}
-
-.uppercase {
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-}
-
-.color {
-    width: 25px;
-    height: 25px;
-    border: 2px solid $brand-black;
-    transition: border-radius 0.5s ease-in-out;
-
-    @each $color in $colors-available {
-        &-#{$color} {
-            background-color: darken($color, 5);
-        }
-    }
-
-    &:focus {
-        border-radius: 25px;
-    }
-}
-
-.item-bottom {
-    a {
-        button {
-
-            border: 3px solid black;
-            font-family: "FOT-Rodin";
-            display: inline-block;
-            border-radius: 4px;
-            background-color: transparent;
-            text-align: center;
-            font-size: 1.2rem;
-            width: 100%;
-            padding: 10px;
-            transition: all 0.5s;
-            cursor: pointer;
-
-            span {
-                cursor: pointer;
-                display: inline-block;
-                position: relative;
-                transition: 0.5s;
-
-                &::after {
-                    content: '\00bb';
-                    position: absolute;
-                    opacity: 0;
-                    top: 0;
-                    right: -20px;
-                    transition: 0.5s;
-                }
-            }
-
-            &:hover {
-                span {
-                    padding-right: 25px;
-
-                    &::after {
-                        opacity: 1;
-                        right: 0;
-                    }
-                }
-            }
-        }
-    }
-}
-
-.down {
-    justify-content: flex-end;
 }

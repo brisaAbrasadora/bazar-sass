@@ -1,0 +1,150 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: darken($brand-color, 5);
+    font-family: "ITCAvantGarde";
+}
+
+main, aside {
+    @extend %container;
+}
+
+header, footer {
+    position: relative;
+    color: white;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 50px black;
+    animation: levitating 5s ease-in-out infinite;
+
+    &.mini-title {
+        color: white;
+        font-size: 2rem;
+        animation: breathing 3s ease-in-out infinite;
+
+        &:hover {
+            animation: lightning 3s ease-in-out infinite;
+        }
+    }
+}
+
+h2 {
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
+
+
+    &:not(header a, footer a) {
+        color: $link-color;
+
+        &:visited {
+            color: $link-color;
+        }
+
+        &:hover {
+            color: $brand-color;
+            text-decoration: underline;
+        }
+    }
+
+    &:not(header a, main a) {
+        color: white;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+footer {
+    background-color: $brand-black;
+}
+
+input {
+
+    &[type="number"] {
+        padding: 5px;
+        border: 1px solid $brand-black;
+        border-radius: 10px;
+        width: 50px;
+    }
+
+    &[type="text"] {
+        width: 130px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        font-size: 1rem;
+        background-color: white;
+        background-image: url('/public/icons/svg/search.svg');
+        background-position: 14px 14px; 
+        background-repeat: no-repeat;
+        padding: 12px 20px 12px 40px;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+
+        &:focus {
+            width: 100%;
+          }
+      }
+
+    &[type="reset"] {
+        font-family: "FOT-rodin";
+        color: white;
+        padding: 8px;
+        font-size: 0.9rem;
+        background-color: $link-color;
+        border: none;
+        border-radius: 2px;
+        box-shadow: 1px 1px 1px black;
+    
+        &:active {
+            background-color: darken($link-color, 20);
+            transform: translate(1px, 1px);
+        }
+    }
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+details {
+    .active {
+        margin-left: 1rem;
+        color: $brand-color !important;
+        font-weight: 500;
+        text-decoration: underline !important;
+    }
+
+    >details {
+        margin-top: 1rem;
+        padding-left: 1.5rem;
+
+        >details {
+            padding-left: 1.5rem;
+        }
+    }
+
+    p {
+        padding-left: 1.5rem;
+    }
+}

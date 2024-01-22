@@ -1,0 +1,360 @@
+@for $i from 0 through 5 {
+    .my-#{$i} {
+        @include generate-marginY($i);
+    }
+
+    .m-#{$i} {
+        @include generate-marginY($i);
+        @include generate-marginX($i);
+    }
+
+    .mx-#{$i} {
+        @include generate-marginX($i);
+    }
+}
+
+@for $i from 0 through 5 {
+    .py-#{$i} {
+        @include generate-paddingY($i);
+    }
+
+    .p-#{$i} {
+        @include generate-paddingY($i);
+        @include generate-paddingX($i);
+    }
+
+    .px-#{$i} {
+        @include generate-paddingX($i);
+    }
+}
+
+@each $alignment in $text-alignment-values {
+    .text-#{$alignment} {
+        @include text-alignment($alignment);
+    }
+}
+
+.col {
+    display: flex;
+
+    @include create-col();
+}
+
+@for $i from 2 through 12 {
+    .col-#{$i} {
+        display: flex;
+        flex-direction: column;
+
+        @include create-col($i);
+    }
+}
+
+.row {
+    display: grid;
+
+    &:not([class*="row-cols-"]) {
+        @include create-row();
+    }
+}
+
+@for $i from 1 through 12 {
+    .row-cols-#{$i} {
+
+        @include create-row($i);
+    }
+}
+
+@each $weight in $font-weight-values {
+    .fw-#{$weight} {
+        font-weight: $weight;
+    }
+}
+
+.btn {
+    color: white;
+    font-family: "FOT-Rodin";
+    background-color: lighten($brand-black, 10%);
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    text-decoration: none !important;
+    @include generate-paddingY(1);
+    @include generate-paddingX(1);
+
+    &-verde {
+        transition: background-color 0.2s ease-in;
+
+        &:hover {
+            background-color: $brand-color !important;
+        }
+
+        &:active {
+            background-color: darken($brand-color, 10%) !important;
+            transition: none !important;
+        }
+    }
+    &-large {
+        width: 100%;
+
+        &:hover {
+            background-color: lighten($brand-black, 15%);
+        }
+    }
+
+    &-group {
+        background-color: transparent;
+
+        button {
+            background-color: darken($link-color, 5%);
+            border: none;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 0.9rem;
+            cursor: pointer;
+            float: left;
+            font-family: "FOT-Rodin";
+
+            &:active {
+                background-color: darken($link-color, 20) !important;
+            }
+
+            &.active {
+                background-color: $link-color;
+            }
+
+            &:first-child {
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
+
+            &:last-child {
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+
+            &:hover {
+                background-color: $link-color;
+            }
+        }
+    }
+
+    &-slide, &-slide-large {
+        display: inline-block;
+        border-radius: 4px;
+        font-size: 1.2rem;
+        width: 200px;
+        transition: all 0.5s;
+
+        &-large {
+            border: 3px solid $brand-black;
+            width: 100%;
+            font-family: "FOT-Rodin";
+            background-color: transparent;
+        }
+
+        >span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+
+            &::after {
+                content: '\00bb';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+        }
+
+        &:hover {
+            >span {
+                padding-right: 25px;
+
+                &::after {
+                    opacity: 1;
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+.column-list {
+    font-size: 0.9rem;
+
+    &:first-of-type {
+        >li:first-child {
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 0.8rem;
+        }
+    }
+
+    li {
+        margin-bottom: 1rem;
+
+        >ul {
+            margin-left: 1.5rem;
+        }
+    }
+}
+
+.label {
+    background-color: $brand-black;
+    color: white;
+    font-weight: 400;
+    position: absolute;
+    padding: 5px 10px;
+    text-transform: uppercase;
+}
+
+.item {
+    border: 1px solid #f7f7f7;
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 1px #bdbdbd;
+    transition: box-shadow 0.1s ease-in-out, transform 0.1s ease-in-out;
+
+    &-top {
+        display: flex;
+        background-color: #f7f7f7;
+    }
+
+    &-image {
+        width: 60%;
+    }
+
+    &-price {
+        font-size: 1.1rem;
+
+        ins {
+            text-decoration: none;
+        }
+
+        del {
+            color: grey;
+        }
+    }
+
+    &-text {
+        font-size: 0.9rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &::after {
+            content: "\A";
+            white-space: pre;
+            display: block;
+        }
+    }
+
+    &-rate {
+        display: flex;
+
+        .icon {
+            height: 1rem;
+            width: 1rem;
+        }
+    }
+
+    &-name {
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+
+    &:hover {
+        border-color: $brand-color;
+        box-shadow: 0px 0px 5px rgba(76, 206, 76, 0.664);
+        transform: scale(1.01);
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+.video-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+
+    .video-object {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1
+    }
+
+    .video-filter {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(96, 255, 96, 0) 0%, darken($brand-color, 5) 100%);
+    }
+}
+
+.color {
+    width: 25px;
+    height: 25px;
+    border: 2px solid $brand-black;
+    transition: border-radius 0.5s ease-in-out;
+
+    @each $color in $colors-available {
+        &-#{"" + $color} {
+            background-color: darken($color, 5);
+        }
+    }
+
+    &:focus {
+        border-radius: 25px;
+    }
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .icon {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+}
+
+.shopping-cart {
+    .row {
+        &:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+.mini-reproductor {
+    box-shadow: 5px 5px $brand-black;
+}
+
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/public/images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-content: center;
+    justify-content: center;
+
+    > .hero-text {
+        color: white;
+        text-align: center;
+        text-shadow: 0px 0px 10px black;
+    }
+}
