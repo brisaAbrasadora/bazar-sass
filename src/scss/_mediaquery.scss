@@ -1,0 +1,161 @@
+// "xxl shows up"
+@media screen and (min-width: 1401px) {
+    // * {
+    //     color: green !important;
+    // }
+
+    .container {
+        max-width: 1320px;
+    }
+
+    @for $i from 1 through 12 {
+        .row-cols-xxl-#{$i} {
+            @include create-row($i);
+        }
+
+        .col-xxl-#{$i} {
+            display: flex;
+            flex-direction: column;
+            @include create-col($i);
+        }
+    }
+
+    .row {
+        display: grid;
+        
+        &:not([class*="row-cols-"]) {
+            @include create-row();
+        }
+    }
+}
+
+// "xl shows up"
+@media screen and (max-width: 1400px) {
+    // * {
+    //     color: red !important;
+    // }
+
+    .container {
+        max-width: 1000px;
+    }
+
+    @for $i from 1 through 12 {
+        .row-cols-xl-#{$i} {
+            @include create-row($i);
+        }
+
+        .col-xl-#{$i} {
+            display: flex;
+            flex-direction: column;
+            @include create-col($i);
+        }
+    }
+
+    .row {
+        display: grid;
+        
+        &:not([class*="row-cols-"]) {
+            @include create-row();
+        }
+    }
+
+    .d-none-xl {
+        display: none !important;
+    }
+
+    @each $key in $grid-breakpoints {
+        .d-none-#{$key} {
+            display: flex;
+        }
+    }
+}
+
+// "lg shows up"
+@media screen and (max-width: 1121px) {
+    // * {
+    //     color: blue !important;
+    // }
+
+    .container {
+        max-width: 800px;
+    }
+
+    @for $i from 1 through 12 {
+        .row-cols-lg-#{$i} {
+            @include create-row($i);
+        }
+
+        .col-lg-#{$i} {
+            display: flex;
+            flex-direction: column;
+            @include create-col($i);
+        }
+    }
+
+    .row {
+        display: grid;
+        
+        &:not([class*="row-cols-"]) {
+            @include create-row();
+        }
+    }
+
+    .row-cols-lg-1 {
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    .d-none-lg {
+        display: none !important;
+    }
+
+    @each $key in $grid-breakpoints {
+        .d-none-#{$key} {
+            display: flex;
+        }
+    }
+}
+
+// "md shows up"
+@media screen and (max-width: 875px) {
+    // * {
+    //     color: yellow !important;
+    // }
+
+    .container {
+        max-width: 500px;
+    }
+
+    @for $i from 1 through 12 {
+        .row-cols-md-#{$i} {
+            @include create-row($i);
+        }
+
+        .col-md-#{$i} {
+            display: flex;
+            flex-direction: column;
+            @include create-col($i);
+        }
+    }
+
+    .row-cols-md-1 {
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    .d-none-md {
+        display: none !important;
+    }
+
+    @each $key in $grid-breakpoints {
+        .d-none-#{$key} {
+            display: flex;
+        }
+    }
+}

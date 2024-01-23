@@ -11,9 +11,7 @@
     .mx-#{$i} {
         @include generate-marginX($i);
     }
-}
 
-@for $i from 0 through 5 {
     .py-#{$i} {
         @include generate-paddingY($i);
     }
@@ -36,8 +34,11 @@
 
 .col {
     display: flex;
-
     @include create-col();
+}
+
+.overflow-hidden {
+    overflow: hidden;
 }
 
 @for $i from 2 through 12 {
@@ -228,6 +229,10 @@
 
     &-image {
         width: 60%;
+
+        &-full {
+            width: 100%;
+        }
     }
 
     &-price {
