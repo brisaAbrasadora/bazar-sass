@@ -88,7 +88,7 @@ nav {
                 display: inline-block;
                 padding: 10px;
                 color: white;
-                transition: margin 0.2s ease-in-out;
+                @include transition(margin, 0.2s, ease-in-out);
 
                 &.nav-item:hover {
                     margin-left: 10px;

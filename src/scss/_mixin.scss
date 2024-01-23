@@ -35,3 +35,26 @@
     gap: $size * 1rem !important;
 }
 
+@mixin box-sizing($x) {
+    -webkit-box-sizing: $x;
+    -moz-box-sizing: $x;
+    box-sizing: $x;
+}
+
+@mixin transition($property, $duration, $timing: linear) {
+    -webkit-transition: $property $duration $timing;
+    -moz-transition: $property $duration $timing;
+    transition: $property $duration $timing;
+}
+
+@mixin double-transition($property, $duration, $timing: linear, $property2, $duration2, $timing2: linear) {
+    -webkit-transition: $property $duration $timing, $property2 $duration2 $timing2;
+    -moz-transition: $property $duration $timing, $property2 $duration2 $timing2;
+    transition: $property $duration $timing, $property2 $duration2 $timing2;
+}
+
+@mixin animation($name, $duration, $timing: linear, $loop: infinite) {
+    -webkit-animation: $name $duration $timing $loop;
+    -moz-animation: $name $duration $timing $loop;
+    animation: $name $duration $timing $loop;
+}

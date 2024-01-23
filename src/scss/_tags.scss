@@ -23,15 +23,15 @@ h1 {
     font-size: 5rem;
     font-weight: 700;
     text-shadow: 1px 1px 50px black;
-    animation: levitating 5s ease-in-out infinite;
+    @include animation(levitating, 5s, ease-in-out);
 
     &.mini-title {
         color: white;
         font-size: 2rem;
-        animation: breathing 3s ease-in-out infinite;
+        @include animation(breathing, 3s, ease-in-out);
 
         &:hover {
-            animation: lightning 3s ease-in-out infinite;
+            @include animation(lightning, 3s, ease-in-out);
         }
     }
 }
@@ -87,7 +87,7 @@ input {
 
     &[type="text"] {
         width: 130px;
-        box-sizing: border-box;
+        @include box-sizing(border-box);
         border: 2px solid #ccc;
         border-radius: 4px;
         font-size: 1rem;
@@ -96,8 +96,7 @@ input {
         background-position: 14px 14px; 
         background-repeat: no-repeat;
         padding: 12px 20px 12px 40px;
-        -webkit-transition: width 0.4s ease-in-out;
-        transition: width 0.4s ease-in-out;
+        @include transition(width, 0.4s, ease-in-out);
 
         &:focus {
             width: 100%;
