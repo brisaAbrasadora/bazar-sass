@@ -17,7 +17,7 @@ nav {
             width: 130%;
             background-color: white;
 
-            > li > a {
+            >li>a {
                 color: black;
             }
         }
@@ -29,7 +29,7 @@ nav {
             left: 100%;
             width: 100%;
 
-            > li {
+            >li {
 
                 border-left: 5px solid darken($brand-color, 20%);
                 backdrop-filter: blur(10px);
@@ -41,9 +41,10 @@ nav {
             }
         }
 
-        > li {
+        >li {
             position: relative;
-            
+
+
             .icon {
                 width: 15px;
                 height: 15px;
@@ -51,40 +52,44 @@ nav {
 
             &:hover {
                 background-color: $brand-color;
-                
 
-                > a {
+                >ul {
+                    box-shadow: 1px 1px 5px black;
+                    z-index: -1;
+                }
+
+                >a {
                     color: white;
 
                     &:not(.nav-category) {
                         margin-left: 10px;
                     }
-                    
+
                 }
 
                 >.icon {
                     color: white;
                 }
 
-                > .submenu {
+                >.submenu {
                     display: flex;
                     flex-direction: column;
-                    // background-color: white;
 
-                    > li:hover {
+
+                    >li:hover {
                         background-color: $brand-color;
-                        
-                        > .subsubmenu {
+
+                        >.subsubmenu {
                             display: flex;
                             flex-direction: column;
-                            
+
                         }
                     }
                 }
             }
 
-            > a {
-                // text-decoration: none;
+            >a {
+
                 display: inline-block;
                 padding: 10px;
                 color: white;

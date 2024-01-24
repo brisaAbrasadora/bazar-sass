@@ -5,33 +5,50 @@ body {
     font-family: "ITCAvantGarde";
 }
 
-main, aside {
+main,
+aside {
     @extend %container;
 }
 
-header, footer {
+header,
+footer {
     position: relative;
     color: white;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     margin: 0;
     padding: 0;
+}
+
+hr {
+    @extend %section-divider;
+
+    &.vertical {
+        height: 80%;
+    }
+
+    &.horizontal {
+        width: 80%;
+    }
 }
 
 h1 {
     font-size: 5rem;
     font-weight: 700;
     text-shadow: 1px 1px 50px black;
-    @include animation(levitating, 5s, ease-in-out);
+    @include animation(levitating, 5s, ease-in-out, infinite);
 
     &.mini-title {
         color: white;
         font-size: 2rem;
-        @include animation(breathing, 3s, ease-in-out);
+        @include animation(breathing, 3s, ease-in-out, infinite);
 
         &:hover {
-            @include animation(lightning, 3s, ease-in-out);
+            @include animation(lightning, 3s, ease-in-out, infinite);
         }
     }
 }
@@ -65,7 +82,7 @@ a {
 
     &:not(header a, main a) {
         color: white;
-        
+
         &:hover {
             text-decoration: underline;
         }
@@ -76,7 +93,37 @@ footer {
     background-color: $brand-black;
 }
 
+textarea {
+    &:invalid {
+        border: 1px solid red;
+        @include animation(error, 0.5s, linear, normal)
+    }
+
+    &:valid {
+        border: 1px solid green;
+        border-radius: 10px;
+    }
+    
+    &:focus {
+        @extend %form-style;
+    }
+    min-width: 20%;
+    max-width: 85%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+}
+
 input {
+
+    &:invalid {
+        border: 1px solid red;
+        @include animation(error, 0.5s, linear, normal)
+    }
+
+    &:valid {
+        border: 1px solid green;
+        border-radius: 10px;
+    }
 
     &[type="number"] {
         padding: 5px;
@@ -85,23 +132,35 @@ input {
         width: 50px;
     }
 
-    &[type="text"] {
-        width: 130px;
-        @include box-sizing(border-box);
-        border: 2px solid #ccc;
-        border-radius: 4px;
-        font-size: 1rem;
-        background-color: white;
-        background-image: url('/public/icons/svg/search.svg');
-        background-position: 14px 14px; 
-        background-repeat: no-repeat;
-        padding: 12px 20px 12px 40px;
-        @include transition(width, 0.4s, ease-in-out);
+    &[type="text"],
+    &[type="email"] {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+        @include transition(border-radius, 0.5s, ease-in-out);
 
         &:focus {
-            width: 100%;
-          }
-      }
+            @extend %form-style;
+        }
+
+        &[name="buscador"] {
+            width: 130px;
+            @include box-sizing(border-box);
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            background-color: white;
+            background-image: url('/public/icons/svg/search.svg');
+            background-position: 14px 14px;
+            background-repeat: no-repeat;
+            padding: 12px 20px 12px 40px;
+            @include transition(width, 0.4s, ease-in-out);
+
+            &:focus {
+                width: 100%;
+            }
+        }
+    }
+
 
     &[type="reset"] {
         font-family: "FOT-rodin";
@@ -112,7 +171,7 @@ input {
         border: none;
         border-radius: 2px;
         box-shadow: 1px 1px 1px black;
-    
+
         &:active {
             background-color: darken($link-color, 20);
             transform: translate(1px, 1px);

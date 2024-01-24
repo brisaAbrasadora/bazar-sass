@@ -8,18 +8,23 @@
 @import "_tags";
 @import "_mediaquery";
 
-%testing {
-    background-color: red !important;
-    border: 1px dashed black !important;
-}
-
 .testing {
-    @extend %testing;
+    border: 1px dashed black;
+    background-color: red;
 }
 
 %container {
     background-color: white;
     border-radius: 20px;
+}
+
+%section-divider {
+    opacity: 50%;
+}
+
+%form-style {
+    outline: none !important;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .container {

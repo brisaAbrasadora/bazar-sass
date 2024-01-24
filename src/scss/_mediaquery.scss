@@ -22,7 +22,7 @@
 
     .row {
         display: grid;
-        
+
         &:not([class*="row-cols-"]) {
             @include create-row();
         }
@@ -53,19 +53,31 @@
 
     .row {
         display: grid;
-        
+
         &:not([class*="row-cols-"]) {
             @include create-row();
         }
     }
 
-    .d-none-xl {
-        display: none !important;
+    .row-cols-xl-1 {
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 15%;
+        padding-right: 15%;
     }
 
     @each $key in $grid-breakpoints {
-        .d-none-#{$key} {
-            display: flex;
+        @if $key =="xl" {
+            .d-none-#{$key} {
+                display: none;
+            }
+        }
+
+        @else {
+            .d-none-#{$key} {
+                display: flex;
+            }
         }
     }
 }
@@ -94,7 +106,7 @@
 
     .row {
         display: grid;
-        
+
         &:not([class*="row-cols-"]) {
             @include create-row();
         }
@@ -108,13 +120,17 @@
         padding-right: 15%;
     }
 
-    .d-none-lg {
-        display: none !important;
-    }
-
     @each $key in $grid-breakpoints {
-        .d-none-#{$key} {
-            display: flex;
+        @if $key =="lg" {
+            .d-none-#{$key} {
+                display: none;
+            }
+        }
+
+        @else {
+            .d-none-#{$key} {
+                display: flex;
+            }
         }
     }
 }
@@ -149,13 +165,17 @@
         padding-right: 15%;
     }
 
-    .d-none-md {
-        display: none !important;
-    }
-
     @each $key in $grid-breakpoints {
-        .d-none-#{$key} {
-            display: flex;
+        @if $key =="md" {
+            .d-none-#{$key} {
+                display: none;
+            }
+        }
+
+        @else {
+            .d-none-#{$key} {
+                display: flex;
+            }
         }
     }
 }

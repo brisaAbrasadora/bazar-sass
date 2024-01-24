@@ -1,6 +1,6 @@
 @mixin create-row($cols: 12) {
-    grid-template-columns: repeat($cols, 1fr); 
-    gap: 2rem;  
+    grid-template-columns: repeat($cols, 1fr);
+    gap: 2rem;
 }
 
 @mixin create-col($span: 1) {
@@ -53,8 +53,17 @@
     transition: $property $duration $timing, $property2 $duration2 $timing2;
 }
 
-@mixin animation($name, $duration, $timing: linear, $loop: infinite) {
-    -webkit-animation: $name $duration $timing $loop;
-    -moz-animation: $name $duration $timing $loop;
-    animation: $name $duration $timing $loop;
+@mixin animation($name, $duration, $timing: linear, $loop) {
+    @if $loop == "infinite" {
+        -webkit-animation: $name $duration $timing $loop;
+        -moz-animation: $name $duration $timing $loop;
+        animation: $name $duration $timing $loop;
+    }
+
+    @else {
+        -webkit-animation: $name $duration $timing;
+        -moz-animation: $name $duration $timing;
+        animation: $name $duration $timing;
+    }
+
 }
